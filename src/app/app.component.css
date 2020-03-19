@@ -1,0 +1,11 @@
+.circular {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+  }
+
+  .bcircular {
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+  }

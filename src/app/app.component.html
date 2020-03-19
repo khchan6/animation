@@ -1,0 +1,49 @@
+<h1 >Part 1: Four favorite animals</h1>
+<br>
+<!-- <img src="../assets/bunny2.PNG" alt=""> -->
+<img @rotated src="http://52.229.126.133/dog2.PNG" alt="" class="circular">
+<img @fade src="http://52.229.126.133/horse2.PNG" alt="" class="circular">
+<img @rotated src="http://52.229.126.133/dog2.PNG" alt="" class="circular">
+<br>
+<img @fade src="http://52.229.126.133/bunny2.PNG" alt="" class="circular">
+<img @rotated src="http://52.229.126.133/cat2.PNG" alt="" class="circular">
+<img @fade src="http://52.229.126.133/bunny2.PNG" alt="" class="circular">
+<br>
+<img @rotated src="http://52.229.126.133/dog2.PNG" alt="" class="circular">
+<img @fade src="http://52.229.126.133/horse2.PNG"  alt="" class="circular">
+<img @rotated src="http://52.229.126.133/dog2.PNG"
+    (@rotated.start)="onAnimationEvent($event)"
+    (@rotated.done)="onAnimationEvent($event)"
+    alt="" class="circular">
+<br>
+<br>
+<br>
+<br>
+<!--
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img *ngIf="completed" @fade 
+    (@fade.start)="onAnimationEvent($event)"
+    (@fade.done)="onAnimationEvent($event)"
+    src={{pic[x]}} alt="" class="bcircular">
+<br>
+-->
+
+<!--
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img *ngIf="completed" @flyout
+    (@flyout.start)="onAnimationEvent($event)"
+    (@flyout.done)="onAnimationEvent($event)"
+    src={{pic[x]}} alt="" class="bcircular">
+-->
+<h1>Part 2: (please wait)</h1>
+<h2 *ngIf="showheader"> Rotating banner (click for high res picture)</h2>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img (click)=clicked() *ngIf="completed" @banner
+    (@banner.start)="onAnimationEvent($event)"
+    (@banner.done)="onAnimationEvent($event)"
+    src={{pic[x]}} alt="" class="bcircular">
+
+<h1>Part 3: (please wait)</h1>
+<h2 *ngIf="showheader">Router link </h2>
+<a *ngIf="showheader" routerLink="/cat">Show cat component</a>    
+<router-outlet *ngIf="showheader"></router-outlet>
